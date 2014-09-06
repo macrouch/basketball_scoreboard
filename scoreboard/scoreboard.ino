@@ -34,7 +34,7 @@ void loop() {
 
   if (start_game) {
     // time = 1000 * 30s
-    for(uint16_t time = 30000; time > 0; time -= 100) {
+    for(uint16_t time = 30000; time > 0; time -= 10) {
       // if time == an even second update matrix
       if (time % 1000 == 0) {
         print_time = time / 1000;
@@ -55,7 +55,7 @@ void loop() {
         Serial.println(baskets);
       }      
 
-      delay(100);
+      delay(10);
     }
     printMatrix(0, baskets);
     delay(5000);
